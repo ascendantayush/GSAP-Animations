@@ -9,6 +9,7 @@ body{
     background-color: #000000;
     color: #FAEB92;
     font-family: "SUSE mono", sans-serif;
+    overflow-x: hidden ;
     
 }
 
@@ -23,7 +24,7 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 20;
-    color: #CC66DA;
+    color: #FAEB92;
 }
 
 
@@ -54,7 +55,7 @@ body{
 #first li a{
     font-size: 28px;
     text-decoration: none;
-    color: #CC66DA;
+    color: #FAEB92;
 }
 
 /* end of nav bar */
@@ -151,13 +152,19 @@ body{
 
 .Horizontal{
     height: 100vh;
+    width: 100%;
     background-color: #FAEB92;
+    /* overflow-y: auto; */
 }
 
 .Horizontal h1{
-    /* font-size: 400px;*/
+    padding:  0% 10vw;
+    text-transform: uppercase;
+    font-size : 40vw;    
     color: #CC66DA;
-     font-family: "Michroma", sans-serif;
+    font-family: "Michroma", sans-serif;
+    white-space: nowrap; 
+    
 }
 
 

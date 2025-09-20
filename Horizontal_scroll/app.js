@@ -28,15 +28,26 @@ pg1.to("#main-heading", {
     scrollTrigger: {
         trigger: "#main-heading",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 34%",
-        end: "",
         scrub: true,      
+        pin: true,
     }
 });
 
 
-var pg2 = gsap.timeline();
+var pg2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".content",
+    scroller: "body",
+    start: "top top",   
+    end: "+=50%",      
+    // markers: true,
+    scrub: 2,
+    pin: true       
+  }
+});
+
 
 pg2.from("#img-one",{
     y: 100,
@@ -62,3 +73,20 @@ pg2.from("#img-two",{
     duration : 1,
     rotation : 50,
 })
+
+const text = document.querySelector(".Horizontal h1");
+const totalScroll = text.scrollWidth - window.innerWidth;
+
+gsap.to(".Horizontal h1", {
+  x: -totalScroll,  
+
+  scrollTrigger: {
+    trigger: ".Horizontal",
+    scroller: "body",
+    markers: true,
+    start: "top top",
+    end: `+=${totalScroll}`, 
+    scrub: true,
+    pin: true
+  }
+});
