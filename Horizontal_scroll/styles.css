@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    color: #FAEB92;
+    font-family: "SUSE mono", sans-serif;
+}
+
+
+#nav{
+    /* background-color: brown; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* <div class="logo">MyBrand</div>
+    <div class="others">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div> */
+
+.logo{
+    padding: 0px 20px;
+    font-size: 30px;
+    /* background-color: green; */
+}
+
+.others{
+    min-width: 600px;
+    /* background-color: pink; */
+    margin-right: 30px;
+}
+
+ul{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #FAEB92;
+}
