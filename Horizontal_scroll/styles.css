@@ -15,22 +15,16 @@ body{
 
 #nav{
     /* background-color: brown; */
+    position: absolute;
+    width: 100%;
     background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
-/* <div class="logo">MyBrand</div>
-    <div class="others">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div> */
 
 .logo{
     padding: 0px 20px;
@@ -58,4 +52,25 @@ li a{
     font-size: 20px;
     text-decoration: none;
     color: #FAEB92;
+}
+
+/* end of nav bar */
+
+.main-image {
+  position: relative;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* hide overflow if video is bigger */
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;   /* keeps aspect ratio, covers full div */
+
 }
