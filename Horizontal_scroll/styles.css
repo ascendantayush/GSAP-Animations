@@ -96,6 +96,7 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .box1{
@@ -141,6 +142,7 @@ body{
 }
 
 /* done with the content section  */
+
 
 
 
