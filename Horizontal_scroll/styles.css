@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 *{
     border: 0;
     margin: 0;
@@ -10,6 +9,7 @@ body{
     background-color: #000000;
     color: #FAEB92;
     font-family: "SUSE mono", sans-serif;
+    
 }
 
 
@@ -78,9 +78,10 @@ body{
     top: 50%;            
     left: 50%;           
     transform: translate(-50%, -50%); 
-    color: #CC66DA;
+    color: #FAEB92;
     z-index: 10;         
     text-align: center;
+    font-family: "Michroma", sans-serif;
 }
 
 /* end of the header */
@@ -154,6 +155,7 @@ body{
 .Horizontal h1{
     /* font-size: 400px;*/
     color: #CC66DA;
+     font-family: "Michroma", sans-serif;
 }
 
 
@@ -161,9 +163,8 @@ body{
 /* start of the footer */
 
 .footer{
-    border: 2px solid green;
     margin: 5px;
-    height: 30vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
