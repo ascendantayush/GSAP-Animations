@@ -75,5 +75,55 @@ li a{
 /* content section */
 
 .content{
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+.box1{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box1 p{
+    width: 900px;
+    padding: 20px;
+}
+.box1 img{
+    /* border: 2px solid yellow; */
+    height: 400px;
+    width: 500px;
+    margin: 30px;
+}
+.box2{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box2 p{
+    width: 900px;
+    padding: 20px;
+}
+.box2 img{
+    /* border: 2px solid yellow; */
+    height: 400px;
+    width: 400px;
+    margin: 30px;
+    border-radius: 50%;
+}
+
+/* done with the content section  */
