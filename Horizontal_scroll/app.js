@@ -78,7 +78,7 @@ const totalScroll = text.scrollWidth - window.innerWidth;
 
 gsap.to(".Horizontal h1", {
   x: -totalScroll,  
-  color : "#9929EA",
+  color : "#00FFCA",
   scrollTrigger: {
     trigger: ".Horizontal",
     scroller: "body",
