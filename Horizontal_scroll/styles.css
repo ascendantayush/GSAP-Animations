@@ -127,3 +127,18 @@ li a{
 }
 
 /* done with the content section  */
+
+
+
+
+/* hprizontal scroll */
+
+.Horizontal{
+    height: 100vh;
+    background-color: #FAEB92;
+}
+
+.Horizontal h1{
+    /* font-size: 400px;*/
+    color: #CC66DA;
+}
