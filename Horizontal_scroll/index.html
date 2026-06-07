@@ -1,96 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizontal Scroll</title>
-  <link rel="icon" type="image/png" href="icon.svg">
+  <meta name="description"
+    content="GSAP Horizontal Scroll — A premium scroll-driven animation showcase built with GSAP and ScrollTrigger.">
+  <title>GSAP — Scroll Experience</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Michroma&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
   <!-- 🔹 NAVBAR -->
   <nav id="nav">
-    <div class="logo">MyBrand</div>
+    <div class="logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">GSAP</span>
+      <span class="logo-bracket">]</span>
+    </div>
     <div class="others">
       <ul id="first">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#hero" data-cursor="link">Home</a></li>
+        <li><a href="#showcase" data-cursor="link">Showcase</a></li>
+        <li><a href="#horizontal" data-cursor="link">Scroll</a></li>
+        <li><a href="#footer" data-cursor="link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- 🔹 PARALLAX IMAGE (do not touch as per your plan) -->
-  <div class="main-image">
-
-    <h1 id="main-heading"> GSAP </h1>
+  <!-- 🔹 HERO SECTION -->
+  <section class="hero" id="hero">
+    <canvas id="particle-canvas"></canvas>
     <video autoplay muted loop playsinline class="bg-video">
-    <source src="4990245-hd_1920_1080_30fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+      <source src="4990245-hd_1920_1080_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-  </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">✦ Scroll-Driven Animation Framework</p>
+      <h1 id="main-heading">
+        <span class="heading-line">Animate</span>
+        <span class="heading-line">Everything<span class="accent-dot">.</span></span>
+      </h1>
+      <p class="hero-sub">Harness the power of GSAP ScrollTrigger to craft cinematic,<br>scroll-driven web experiences.
+      </p>
+      <a href="#showcase" class="hero-cta" data-cursor="link">
+        <span>Explore</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 17L17 7M17 7H7M17 7V17" />
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-  <!-- 🔹 CONTENT SECTION -->
-  <div class="content">
+  <!-- 🔹 CONTENT SHOWCASE SECTION -->
+  <section class="content" id="showcase">
+    <div class="section-label">
+      <span class="label-num">01</span>
+      <span class="label-line"></span>
+      <span class="label-text">Showcase</span>
+    </div>
+
     <div class="box1">
-      <img src="first.avif" alt="Sample 1" id="img-one">
-      <p id="my-text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eveniet nulla aut expedita, excepturi dignissimos sunt totam quasi deleniti facere saepe nemo laborum labore fugiat ipsum ipsa soluta exercitationem atque repellendus dolores iste placeat minima. Ad distinctio quia natus enim, debitis exercitationem ab nisi porro asperiores molestias necessitatibus earum illum facere dolor, quam harum corrupti cum minus nam. Sapiente beatae ipsum architecto eum perferendis quos quas suscipit. Nihil voluptates sit distinctio officia adipisci laboriosam quam dolore! Officiis nemo eos neque?</p>
+      <div class="img-wrapper" id="img-wrapper-one">
+        <img src="first.avif" alt="Creative design showcase" id="img-one">
+      </div>
+      <div class="text-block" id="text-block-one">
+        <h2 class="reveal-text">Scroll-Driven<br><em>Storytelling</em></h2>
+        <p id="my-text1">GSAP's ScrollTrigger plugin transforms passive scrolling into an interactive narrative. Each
+          element awakens as it enters the viewport, creating a choreographed dance of content that guides the user's
+          eye through your story with precision and elegance.</p>
+        <div class="text-tags">
+          <span class="tag">ScrollTrigger</span>
+          <span class="tag">Timeline</span>
+          <span class="tag">Scrub</span>
+        </div>
+      </div>
     </div>
 
-    <div class="box2" >
-      <p id="my-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit error, expedita necessitatibus rem voluptates reiciendis incidunt repellat iste inventore delectus illo pariatur consectetur, nostrum ipsam quia. Molestiae ab nemo eligendi iusto architecto, quas dolorum labore. Deserunt voluptatem modi quos itaque ut nemo error officiis! Atque distinctio veniam commodi, excepturi, recusandae ab sint ea harum obcaecati, maxime ducimus blanditiis suscipit quas est! Facere laboriosam itaque aperiam dolores hic iure est commodi sequi. Nulla deleniti facere quasi optio sunt laudantium id est!</p>
-      <img src="second.avif" alt="Sample 2" id="img-two">
-      
+    <div class="box2">
+      <div class="text-block" id="text-block-two">
+        <h2 class="reveal-text">Buttery Smooth<br><em>Performance</em></h2>
+        <p id="my-text2">With hardware-accelerated transforms and intelligent rendering, GSAP delivers silky-smooth
+          60fps animations even on complex, content-heavy pages. Pin elements, scrub through timelines, and create
+          parallax effects without a single dropped frame.</p>
+        <div class="text-tags">
+          <span class="tag">60fps</span>
+          <span class="tag">GPU Accelerated</span>
+          <span class="tag">Pinning</span>
+        </div>
+      </div>
+      <div class="img-wrapper" id="img-wrapper-two">
+        <img src="second.avif" alt="Performance visualization" id="img-two">
+      </div>
     </div>
-  </div>
+  </section>
 
+  <!-- 🔹 STATS COUNTER SECTION -->
+  <section class="stats-section" id="stats">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number" data-target="11000000">0</span>
+        <span class="stat-suffix">+</span>
+        <p class="stat-label">Sites Powered</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="60">0</span>
+        <span class="stat-suffix">fps</span>
+        <p class="stat-label">Buttery Smooth</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="50">0</span>
+        <span class="stat-suffix">+</span>
+        <p class="stat-label">Plugins & Tools</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="100">0</span>
+        <span class="stat-suffix">%</span>
+        <p class="stat-label">Open Source Love</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- 🔹 HORIZONTAL SCROLL -->
+  <section class="horizontal-wrap" id="horizontal">
+    <div class="horizontal-track">
+      <div class="h-panel panel-intro">
+        <span class="panel-number">01</span>
+        <h2>Horizontal<br>Scroll<span class="accent-dot">.</span></h2>
+        <p>Swipe through immersive panels driven by vertical scroll.</p>
+      </div>
+      <div class="h-panel panel-feature">
+        <div class="panel-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.15" />
+            <path d="M36 12L22 34h10l-4 18 14-22H32l4-18z" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Lightning Fast</h3>
+        <p>GSAP renders animations up to 20× faster than jQuery, with zero dependencies and a tiny footprint.</p>
+      </div>
+      <div class="h-panel panel-feature">
+        <div class="panel-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.15" />
+            <circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="2" />
+            <circle cx="32" cy="32" r="4" fill="currentColor" />
+            <line x1="32" y1="8" x2="32" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="32" y1="48" x2="32" y2="56" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="8" y1="32" x2="16" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="48" y1="32" x2="56" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3>Pixel Perfect</h3>
+        <p>Sub-pixel rendering and advanced easing give you surgical control over every keyframe.</p>
+      </div>
+      <div class="h-panel panel-feature">
+        <div class="panel-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.15" />
+            <rect x="14" y="14" width="14" height="14" rx="3" stroke="currentColor" stroke-width="2" />
+            <rect x="36" y="14" width="14" height="14" rx="3" stroke="currentColor" stroke-width="2" />
+            <rect x="14" y="36" width="14" height="14" rx="3" stroke="currentColor" stroke-width="2" />
+            <rect x="36" y="36" width="14" height="14" rx="3" fill="currentColor" rx="3" />
+            <circle cx="32" cy="32" r="3" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Plugin Ecosystem</h3>
+        <p>ScrollTrigger, Draggable, MorphSVG, MotionPath — extend your creative toolkit effortlessly.</p>
+      </div>
+      <div class="h-panel panel-feature">
+        <div class="panel-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.15" />
+            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="2" />
+            <ellipse cx="32" cy="32" rx="8" ry="16" stroke="currentColor" stroke-width="1.5" />
+            <line x1="14" y1="26" x2="50" y2="26" stroke="currentColor" stroke-width="1.5" />
+            <line x1="14" y1="38" x2="50" y2="38" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </div>
+        <h3>Universal Support</h3>
+        <p>Works everywhere — React, Vue, vanilla JS, Webflow, WordPress — with framework-agnostic APIs.</p>
+      </div>
+      <div class="h-panel panel-cta">
+        <h2>Ready to<br>Animate<span class="accent-dot">?</span></h2>
+        <a href="https://gsap.com" target="_blank" rel="noopener" class="panel-btn" data-cursor="link">Get Started →</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- 🔹 HORIZONTAL SCROLL (untouched) -->
-  <div class="Horizontal">
-    <h1>GSAP is fun</h1>
-  </div>
+  <!-- 🔹 MARQUEE TEXT -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <span>GSAP IS FUN ✦ SCROLL DRIVEN ✦ ANIMATE EVERYTHING ✦ GSAP IS FUN ✦ SCROLL DRIVEN ✦ ANIMATE EVERYTHING
+        ✦&nbsp;</span>
+      <span>GSAP IS FUN ✦ SCROLL DRIVEN ✦ ANIMATE EVERYTHING ✦ GSAP IS FUN ✦ SCROLL DRIVEN ✦ ANIMATE EVERYTHING
+        ✦&nbsp;</span>
+    </div>
+  </section>
 
   <!-- 🔹 FOOTER -->
-  <footer class="footer">
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <h2 class="footer-heading">Let's Build<br>Something <em>Amazing</em><span class="accent-dot">.</span></h2>
+    </div>
     <div class="footer-container">
       <div class="footer-about">
-        <h3>About Us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. 
-           Praesent libero. Sed cursus ante dapibus.</p>
+        <h3>About</h3>
+        <p>A creative showcase of GSAP animation capabilities, demonstrating scroll-driven interactions, horizontal
+          scrolling, and cinematic web experiences.</p>
       </div>
 
       <div class="footer-links">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#horizontal">Scroll</a></li>
+          <li><a href="https://gsap.com" target="_blank" rel="noopener">GSAP Docs</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
         <h3>Contact</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>Address: 123 Main Street, City</p>
+        <p>Email: hello@gsap-demo.dev</p>
+        <p>GitHub: @gsap-showcase</p>
+        <p>Made with ♥ and GSAP</p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <hr class="divider">
-      <p>&copy; 2025 MyBrand. All rights reserved.</p>
+      <p>&copy; 2025 GSAP Showcase by Ayush Raj. Crafted with ScrollTrigger.</p>
     </div>
   </footer>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
-;
