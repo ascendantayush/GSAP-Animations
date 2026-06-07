@@ -1,34 +1,50 @@
 # Horizontal Scroll Animation
 
-A smooth horizontal scrolling experience built with GSAP and ScrollTrigger. As the user scrolls vertically, the content glides horizontally — creating a fluid, cinematic feel.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)
 
-## Demo
+A cinematic horizontal scrolling experience with scroll-driven animations, a custom cursor, and a live progress indicator — built entirely with vanilla JS and GSAP.
 
-🔗 [Live Site](https://ascendantayush.github.io/GSAP-Animations/)
+🔗 **[View Live Demo](https://ascendantayush.github.io/GSAP-Animations/)**
 
-## Features
+---
 
-- **Horizontal scroll** — vertical scroll input translates to a smooth horizontal content pan
-- **Custom cursor** — replaces the default cursor with a styled interactive cursor that reacts to movement
-- **Scroll progress bar** — a thin bar at the top of the page fills as the user scrolls, giving a clear sense of position
-- **Image animations** — images animate in from left to right as they enter the viewport, driven by scroll position
+## ✨ Highlights
 
-## Built With
+| Feature | Details |
+|---|---|
+| 🖱️ Custom Cursor | Fully custom cursor with smooth trailing lag effect |
+| ↔️ Horizontal Scroll | Vertical scroll seamlessly drives horizontal content pan |
+| 🖼️ Image Animations | Images animate left-to-right on scroll entry via ScrollTrigger |
+| 📊 Progress Bar | Real-time scroll progress bar pinned to the top of the viewport |
 
-- HTML, CSS, JavaScript
-- [GSAP](https://gsap.com/) — animation library
-- [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) — scroll-driven animation plugin
+---
 
-## How It Works
+## 🛠️ Tech Stack
 
-ScrollTrigger pins the horizontal container and maps vertical scroll progress to an `x` translation on the content wrapper. The progress bar width and image entrance animations are tied to the same scroll timeline. The custom cursor tracks `mousemove` events and follows with a slight lag for a smooth trailing effect.
+- **GSAP + ScrollTrigger** — scroll-linked animation timeline
+- **Vanilla JS** — zero dependencies beyond GSAP
+- **HTML5 / CSS3** — semantic markup and custom styling
 
-## Run Locally
+---
 
-No build step needed — just open `index.html` in a browser.
+## 🚀 Run Locally
 
 ```bash
 git clone https://github.com/ascendantayush/GSAP-Animations.git
 cd GSAP-Animations
-open index.html
+open index.html   # or just double-click index.html
 ```
+
+No build tools. No npm install. Just open and run.
+
+---
+
+## 💡 Key Concepts Demonstrated
+
+- Scroll-driven animation using `ScrollTrigger.create()` with pin and scrub
+- DOM-based custom cursor using `mousemove` event listeners
+- Timeline sequencing with `gsap.timeline()` for coordinated entrance animations
+- CSS `scaleX` progress bar tied directly to scroll percentage
