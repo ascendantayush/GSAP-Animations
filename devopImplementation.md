@@ -62,7 +62,8 @@ Whenever the source code is updated, Jenkins can pull the latest version directl
 
 ## Screenshot
 
-> 
+> <img width="1917" height="1079" alt="Screenshot from 2026-06-30 19-10-24" src="https://github.com/user-attachments/assets/6e53313d-3cf9-4b51-af37-f69f5ab385b0" />
+
 
 ---
 
@@ -81,7 +82,10 @@ Whenever the pipeline is executed, Jenkins automatically builds and deploys the 
 
 ## Screenshot
 
-> _(Paste Jenkins Dashboard Screenshot Here)_
+> <img width="1917" height="501" alt="Screenshot from 2026-06-30 19-11-04" src="https://github.com/user-attachments/assets/6124c81e-4aeb-4ab5-86ac-78ed802bd048" />
+> <img width="1917" height="922" alt="Screenshot from 2026-06-30 19-11-21" src="https://github.com/user-attachments/assets/0811b9cf-19be-486e-8975-55c8b0bcf958" />
+<img width="1917" height="1074" alt="Screenshot from 2026-06-30 19-11-43" src="https://github.com/user-attachments/assets/f33612c7-8f9c-43da-82ef-ac9cc0c68cf7" />
+
 
 ---
 
