@@ -62,7 +62,7 @@ Whenever the source code is updated, Jenkins can pull the latest version directl
 
 ## Screenshot
 
-> _(Paste GitHub Repository Screenshot Here)_
+> 
 
 ---
 
