@@ -1,4 +1,4 @@
-<img width="366" height="504" alt="Screenshot from 2026-06-30 19-29-53" src="https://github.com/user-attachments/assets/6b825072-d21c-432e-b9cd-40ed01accc6d" /># 🚀 DevOps Implementation
+# 🚀 DevOps Implementation
 
 This document describes the DevOps pipeline implemented for the GSAP Portfolio project.
 
