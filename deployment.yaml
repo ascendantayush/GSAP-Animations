@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: gsap-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: gsap
+
+  template:
+    metadata:
+      labels:
+        app: gsap
+
+    spec:
+      containers:
+        - name: gsap-container
+          image: gsap-portfolio:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
