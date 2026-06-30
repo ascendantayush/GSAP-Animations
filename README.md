@@ -48,3 +48,38 @@ No build tools. No npm install. Just open and run.
 - DOM-based custom cursor using `mousemove` event listeners
 - Timeline sequencing with `gsap.timeline()` for coordinated entrance animations
 - CSS `scaleX` progress bar tied directly to scroll percentage
+
+---
+
+# 🚀 DevOps Implementation
+
+This project was extended with a complete DevOps workflow to automate building, deployment, orchestration, and monitoring.
+
+## 🛠 Technologies Used
+
+- Git & GitHub
+- Jenkins
+- Docker
+- Kubernetes (Minikube)
+- Nagios
+- Graphite
+- Grafana
+
+---
+
+## CI/CD Pipeline
+
+The project uses a Jenkins Declarative Pipeline to:
+
+1. Pull the latest code from GitHub.
+2. Build a Docker image.
+3. Stop the old container.
+4. Deploy a new container.
+5. Verify the deployment.
+
+```
+GitHub
+    ↓
+ Jenkins
+    ↓
+ Docker
