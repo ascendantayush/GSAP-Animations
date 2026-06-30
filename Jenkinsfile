@@ -2,17 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+
+        stage('Check Docker') {
             steps {
-                checkout scm
+                sh 'docker --version'
+                sh 'docker images'
             }
         }
 
-        stage('List Files') {
-            steps {
-                sh 'pwd'
-                sh 'ls -la'
-            }
-        }
     }
 }
